@@ -1,5 +1,5 @@
 class Market
-  attr_reader :name, :vendors
+  attr_reader :name, :vendors, :potential_revenue
   def initialize(name)
     @name = name
     @vendors = []
@@ -23,5 +23,15 @@ class Market
       end
     end
     list
+  end
+
+  def potential_revenue
+    total = 0
+    @inventory.map do |item|
+      price = item.keys.price.gsub("$", "")
+      price = price.to_f
+      total += inventory.value_at(item) * price
+    end
+    total
   end
 end

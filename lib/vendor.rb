@@ -1,5 +1,5 @@
 class Vendor
-  attr_reader :name, :inventory, :stock
+  attr_reader :name, :inventory, :stock, :potential_revenue
   def initialize(name)
     @name = name
     @inventory = {}
