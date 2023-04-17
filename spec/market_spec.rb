@@ -23,5 +23,7 @@ RSpec.describe Market do
     market.add_vendor(vendor2)
     market.add_vendor(vendor3)
     expect(market.vendors).to eq([vendor1, vendor2, vendor3])
+    expect(market.vendor_names).to eq(["Rocky Mountain Fresh", "Ba-Nom-a-Nom", "Palisade Peach Shack"])
+
   end
 end
