@@ -12,6 +12,6 @@ class Vendor
     end
   end
   def stock(item, qnty)
-    @inventory.merge!(item => qnty)
+    @inventory[item] = qnty
   end
 end
